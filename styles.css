@@ -18,8 +18,9 @@
 html {
   background-color: var(--parchment);
   background-image:
-    linear-gradient(rgb(246 236 217 / 80%), rgb(246 236 217 / 80%)),
+    linear-gradient(rgb(246 236 217 / 45%), rgb(246 236 217 / 45%)),
     url("https://upload.wikimedia.org/wikipedia/commons/d/d2/Dwelling_in_the_Fuchun_Mountains_%28first_half%29.JPG");
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -29,38 +30,38 @@ html {
 @keyframes rehang {
   0% {
     background-image:
-      linear-gradient(rgb(246 236 217 / 80%), rgb(246 236 217 / 80%)),
+      linear-gradient(rgb(246 236 217 / 45%), rgb(246 236 217 / 45%)),
       url("https://upload.wikimedia.org/wikipedia/commons/d/d2/Dwelling_in_the_Fuchun_Mountains_%28first_half%29.JPG");
   }
 
   16.66% {
     background-image:
-      linear-gradient(rgb(246 236 217 / 80%), rgb(246 236 217 / 80%)),
-      url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Dwelling_in_the_Fuchun_Mountains_%28second_half%29.jpg/1920px-Dwelling_in_the_Fuchun_Mountains_%28second_half%29.jpg");
+      linear-gradient(rgb(246 236 217 / 45%), rgb(246 236 217 / 45%)),
+      url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Huang_Gongwang._Clearing_After_Sudden_Snow._ca._1340._104%2C6_cm_long.Palace_Museum%2C_Beijing.jpg/1920px-Huang_Gongwang._Clearing_After_Sudden_Snow._ca._1340._104%2C6_cm_long.Palace_Museum%2C_Beijing.jpg");
   }
 
   33.33% {
     background-image:
-      linear-gradient(rgb(246 236 217 / 80%), rgb(246 236 217 / 80%)),
-      url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/%E5%AF%8C%E6%98%A5%E5%B1%B1%E5%B1%85%E5%9C%96%28%E5%89%A9%E5%B1%B1%E5%9C%96%29.jpg/1920px-%E5%AF%8C%E6%98%A5%E5%B1%B1%E5%B1%85%E5%9C%96%28%E5%89%A9%E5%B1%B1%E5%9C%96%29.jpg");
+      linear-gradient(rgb(246 236 217 / 45%), rgb(246 236 217 / 45%)),
+      url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Huang_Gongwang._Dwelling_in_the_Fuchun_Mountains._detail._National_Palace_Museum%2C_Taipei.jpg/1920px-Huang_Gongwang._Dwelling_in_the_Fuchun_Mountains._detail._National_Palace_Museum%2C_Taipei.jpg");
   }
 
   50% {
     background-image:
-      linear-gradient(rgb(246 236 217 / 80%), rgb(246 236 217 / 80%)),
+      linear-gradient(rgb(246 236 217 / 45%), rgb(246 236 217 / 45%)),
       url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/%E9%BB%84%E5%85%AC%E6%9C%9B%E5%A4%A9%E6%B1%A0%E7%9F%B3%E5%A3%81%E5%9B%BE%E8%BD%B4.png/1920px-%E9%BB%84%E5%85%AC%E6%9C%9B%E5%A4%A9%E6%B1%A0%E7%9F%B3%E5%A3%81%E5%9B%BE%E8%BD%B4.png");
   }
 
   66.66% {
     background-image:
-      linear-gradient(rgb(246 236 217 / 80%), rgb(246 236 217 / 80%)),
+      linear-gradient(rgb(246 236 217 / 45%), rgb(246 236 217 / 45%)),
       url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/%E9%BB%84%E5%85%AC%E6%9C%9B%E4%B9%9D%E5%B3%B0%E9%9B%AA%E9%9C%81%E5%9B%BE%E8%BD%B4.png/960px-%E9%BB%84%E5%85%AC%E6%9C%9B%E4%B9%9D%E5%B3%B0%E9%9B%AA%E9%9C%81%E5%9B%BE%E8%BD%B4.png");
   }
 
   83.33% {
     background-image:
-      linear-gradient(rgb(246 236 217 / 80%), rgb(246 236 217 / 80%)),
-      url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/%E5%AF%8C%E6%98%A5%E5%B1%B1%E5%B1%85%E5%9C%96%28%E7%84%A1%E7%94%A8%E5%B8%AB%E5%8D%B7%29.jpg/3840px-%E5%AF%8C%E6%98%A5%E5%B1%B1%E5%B1%85%E5%9C%96%28%E7%84%A1%E7%94%A8%E5%B8%AB%E5%8D%B7%29.jpg");
+      linear-gradient(rgb(246 236 217 / 45%), rgb(246 236 217 / 45%)),
+      url("https://upload.wikimedia.org/wikipedia/commons/1/1b/%E9%BB%84%E5%85%AC%E6%9C%9B%E4%B8%B9%E5%B4%96%E7%8E%89%E6%A0%91%E5%9B%BE%E8%BD%B4.png");
   }
 }
 
