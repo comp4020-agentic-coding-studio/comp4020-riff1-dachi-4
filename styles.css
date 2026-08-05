@@ -18,13 +18,18 @@ body {
   font-family: Georgia, "Times New Roman", serif;
   color: var(--ink);
   background-color: var(--parchment);
-  background-image: repeating-linear-gradient(
-    45deg,
-    var(--parchment-dark) 0,
-    var(--parchment-dark) 2px,
-    transparent 2px,
-    transparent 16px
-  );
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      var(--parchment-dark) 0,
+      var(--parchment-dark) 2px,
+      transparent 2px,
+      transparent 16px
+    ),
+    linear-gradient(rgb(246 236 217 / 88%), rgb(246 236 217 / 88%)),
+    url("https://upload.wikimedia.org/wikipedia/commons/d/d2/Dwelling_in_the_Fuchun_Mountains_%28first_half%29.JPG");
+  background-size: auto, auto, cover;
+  background-attachment: fixed;
   line-height: 1.6;
 }
 
@@ -144,15 +149,19 @@ h2 {
   text-align: center;
 }
 
+/* the counter is a collector's seal now; the scroll has dozens, one more won't hurt */
 .counter {
   display: inline-block;
   margin-top: 1rem;
-  padding: 0.3rem 0.6rem;
-  border: 2px solid var(--gold);
-  background: #111;
-  color: #4dff4d;
+  padding: 0.4rem 0.7rem;
+  border: 3px solid var(--seal);
+  background: var(--paper);
+  color: var(--seal);
   font-family: "Courier New", monospace;
+  font-weight: bold;
   letter-spacing: 0.2rem;
+  transform: rotate(-2deg);
+  box-shadow: 2px 2px 0 var(--parchment-dark);
 }
 
 .badges {
