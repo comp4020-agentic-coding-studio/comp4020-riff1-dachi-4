@@ -83,15 +83,10 @@ body {
   font-family: Georgia, "Times New Roman", serif;
   color: var(--ink);
   background-color: transparent;
-  background-image:
-    repeating-linear-gradient(
-      45deg,
-      var(--parchment-dark) 0,
-      var(--parchment-dark) 2px,
-      transparent 2px,
-      transparent 16px
-    ),
-    linear-gradient(rgb(246 236 217 / 80%), rgb(246 236 217 / 80%));
+  background-image: linear-gradient(
+    rgb(246 236 217 / 80%),
+    rgb(246 236 217 / 80%)
+  );
   line-height: 1.6;
 }
 
@@ -101,52 +96,6 @@ a {
 
 a:visited {
   color: #55365a;
-}
-
-/* the marquee every good shrine deserves */
-.ticker {
-  overflow: hidden;
-  white-space: nowrap;
-  border-top: 3px double var(--seal);
-  border-bottom: 3px double var(--seal);
-  background: var(--ink);
-}
-
-.ticker-track {
-  display: inline-block;
-  margin: 0;
-  padding: 0.4rem 0 0.4rem 100%;
-  color: var(--gold);
-  font-weight: bold;
-  letter-spacing: 0.05em;
-  animation: ticker 26s linear infinite;
-}
-
-@keyframes ticker {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-100%);
-  }
-}
-
-.blink {
-  animation: blink 1.6s steps(1) infinite;
-}
-
-@keyframes blink {
-  50% {
-    opacity: 0.15;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .ticker-track,
-  .blink {
-    animation: none;
-  }
 }
 
 /* the nav is the scroll's mounting: dark silk, gold hairlines, paper title-slips */
@@ -212,11 +161,39 @@ header nav[aria-label="Primary"] a:focus-visible {
   color: var(--ink);
 }
 
+/* laid paper: scattered fibre flecks on no particular axis, over a soft uneven
+   mottle, the way a hand-made sheet dries thicker in some places than others */
 main {
   max-width: 42rem;
   margin: 2rem auto;
   padding: 2rem;
-  background: var(--paper);
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(rgb(122 31 31 / 5%) 0.6px, transparent 0.7px),
+    radial-gradient(rgb(168 121 26 / 6%) 0.5px, transparent 0.6px),
+    radial-gradient(rgb(42 10 10 / 4%) 0.4px, transparent 0.5px),
+    radial-gradient(
+      ellipse at 22% 18%,
+      rgb(234 217 184 / 50%) 0,
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse at 78% 72%,
+      rgb(234 217 184 / 42%) 0,
+      transparent 50%
+    );
+  background-position:
+    0 0,
+    11px 7px,
+    5px 19px,
+    0 0,
+    0 0;
+  background-size:
+    23px 29px,
+    37px 41px,
+    53px 47px,
+    100% 100%,
+    100% 100%;
   border: 4px double var(--seal);
   box-shadow: 0 0 0 2px var(--gold);
 }
