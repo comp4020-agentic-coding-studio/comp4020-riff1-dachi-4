@@ -110,6 +110,43 @@ a:visited {
   color: #55365a;
 }
 
+/* The endless runner. Seven metres of river valley going past forever at the
+   top of the page, because that is what a handscroll is: nobody ever sees the
+   whole thing, it just keeps arriving. */
+.runner {
+  overflow: hidden;
+  border-bottom: 3px double var(--seal);
+  background: var(--ink);
+}
+
+.runner-track {
+  display: flex;
+  width: max-content;
+  animation: runner 90s linear infinite;
+}
+
+.runner-track img {
+  display: block;
+  width: auto;
+  height: 108px;
+}
+
+@keyframes runner {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .runner-track {
+    animation: none;
+  }
+}
+
 /* the nav is the scroll's mounting: dark silk, gold hairlines, paper title-slips */
 header {
   background: var(--ink);
