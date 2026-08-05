@@ -235,6 +235,21 @@ blockquote {
   max-width: none;
 }
 
+/* wet ink: the entry exists only while #your-mark is targeted */
+.guestbook .ghost {
+  display: none;
+}
+
+.guestbook .ghost:target {
+  display: list-item;
+}
+
+.guestbook .ghost:not(:target) + .entry {
+  margin-top: 0;
+  border-top: none;
+  padding-top: 0;
+}
+
 .sign-form {
   margin: 1.5rem 0;
   padding: 1rem;
