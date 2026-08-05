@@ -12,12 +12,77 @@
   box-sizing: border-box;
 }
 
+/* The shrine rehangs itself. Which painting is up behind the paper depends on
+   which hall you walked into and how long you've lingered in it — six works,
+   an hour of wall time, each hall starting somewhere else in the cycle. */
+html {
+  background-color: var(--parchment);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  animation: rehang 360s steps(1) infinite;
+}
+
+@keyframes rehang {
+  0% {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/d2/Dwelling_in_the_Fuchun_Mountains_%28first_half%29.JPG");
+  }
+
+  16.66% {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Dwelling_in_the_Fuchun_Mountains_%28second_half%29.jpg/1920px-Dwelling_in_the_Fuchun_Mountains_%28second_half%29.jpg");
+  }
+
+  33.33% {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/%E5%AF%8C%E6%98%A5%E5%B1%B1%E5%B1%85%E5%9C%96%28%E5%89%A9%E5%B1%B1%E5%9C%96%29.jpg/1920px-%E5%AF%8C%E6%98%A5%E5%B1%B1%E5%B1%85%E5%9C%96%28%E5%89%A9%E5%B1%B1%E5%9C%96%29.jpg");
+  }
+
+  50% {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/%E9%BB%84%E5%85%AC%E6%9C%9B%E5%A4%A9%E6%B1%A0%E7%9F%B3%E5%A3%81%E5%9B%BE%E8%BD%B4.png/1920px-%E9%BB%84%E5%85%AC%E6%9C%9B%E5%A4%A9%E6%B1%A0%E7%9F%B3%E5%A3%81%E5%9B%BE%E8%BD%B4.png");
+  }
+
+  66.66% {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/%E9%BB%84%E5%85%AC%E6%9C%9B%E4%B9%9D%E5%B3%B0%E9%9B%AA%E9%9C%81%E5%9B%BE%E8%BD%B4.png/960px-%E9%BB%84%E5%85%AC%E6%9C%9B%E4%B9%9D%E5%B3%B0%E9%9B%AA%E9%9C%81%E5%9B%BE%E8%BD%B4.png");
+  }
+
+  83.33% {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/%E5%AF%8C%E6%98%A5%E5%B1%B1%E5%B1%85%E5%9C%96%28%E7%84%A1%E7%94%A8%E5%B8%AB%E5%8D%B7%29.jpg/3840px-%E5%AF%8C%E6%98%A5%E5%B1%B1%E5%B1%85%E5%9C%96%28%E7%84%A1%E7%94%A8%E5%B8%AB%E5%8D%B7%29.jpg");
+  }
+}
+
+.hall-2 {
+  animation-delay: -60s;
+}
+
+.hall-3 {
+  animation-delay: -120s;
+}
+
+.hall-4 {
+  animation-delay: -180s;
+}
+
+.hall-5 {
+  animation-delay: -240s;
+}
+
+.hall-6 {
+  animation-delay: -300s;
+}
+
+/* still varied per hall, just no longer rehanging under you */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    animation-play-state: paused;
+  }
+}
+
 body {
+  min-height: 100vh;
   margin: 0;
   padding: 0;
   font-family: Georgia, "Times New Roman", serif;
   color: var(--ink);
-  background-color: var(--parchment);
+  background-color: transparent;
   background-image:
     repeating-linear-gradient(
       45deg,
@@ -26,10 +91,7 @@ body {
       transparent 2px,
       transparent 16px
     ),
-    linear-gradient(rgb(246 236 217 / 88%), rgb(246 236 217 / 88%)),
-    url("https://upload.wikimedia.org/wikipedia/commons/d/d2/Dwelling_in_the_Fuchun_Mountains_%28first_half%29.JPG");
-  background-size: auto, auto, cover;
-  background-attachment: fixed;
+    linear-gradient(rgb(246 236 217 / 88%), rgb(246 236 217 / 88%));
   line-height: 1.6;
 }
 
@@ -87,28 +149,67 @@ a:visited {
   }
 }
 
+/* the nav is the scroll's mounting: dark silk, gold hairlines, paper title-slips */
+header {
+  background: var(--ink);
+}
+
 header nav[aria-label="Primary"] {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.6rem;
-  padding: 1rem;
-  background: var(--seal);
+  gap: 0.5rem;
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 0.9rem 1rem;
+  box-shadow:
+    inset 0 1px 0 var(--gold),
+    inset 0 -1px 0 var(--gold);
 }
 
 header nav[aria-label="Primary"] a {
   display: inline-block;
-  padding: 0.4rem 0.9rem;
-  border: 2px outset var(--parchment-dark);
-  background: var(--gold);
+  padding: 0.35rem 0.9rem;
+  border: 1px solid var(--gold-deep);
+  background: var(--parchment);
+  box-shadow: 2px 2px 0 rgb(0 0 0 / 35%);
   color: var(--ink);
-  font-weight: bold;
+  letter-spacing: 0.02em;
   text-decoration: none;
 }
 
-header nav[aria-label="Primary"] a:hover,
-header nav[aria-label="Primary"] a:focus {
-  border-style: inset;
+header nav[aria-label="Primary"] a:hover {
+  background: var(--gold);
+  box-shadow: 1px 1px 0 rgb(0 0 0 / 35%);
+  transform: translate(1px, 1px);
+}
+
+/* the slip for the hall you're standing in, stamped and pressed flat */
+header nav[aria-label="Primary"] a[aria-current="page"] {
+  border-color: var(--gold);
+  background: var(--seal);
+  box-shadow: none;
+  color: var(--parchment);
+  transform: translate(1px, 1px);
+}
+
+header nav[aria-label="Primary"] a[aria-current="page"]::before {
+  content: "❈ ";
+  color: var(--gold);
+}
+
+:focus-visible {
+  outline: 3px solid var(--seal);
+  outline-offset: 2px;
+}
+
+header nav[aria-label="Primary"] a:focus-visible {
+  outline-color: var(--gold);
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--ink);
 }
 
 main {
@@ -223,6 +324,11 @@ blockquote {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.plate.portrait {
+  max-width: 20rem;
+  margin-inline: auto;
 }
 
 .plate figcaption {
