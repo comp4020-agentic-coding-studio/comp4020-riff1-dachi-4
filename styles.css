@@ -91,7 +91,7 @@ body {
       transparent 2px,
       transparent 16px
     ),
-    linear-gradient(rgb(246 236 217 / 88%), rgb(246 236 217 / 88%));
+    linear-gradient(rgb(246 236 217 / 80%), rgb(246 236 217 / 80%));
   line-height: 1.6;
 }
 
