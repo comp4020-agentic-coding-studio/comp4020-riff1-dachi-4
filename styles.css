@@ -201,6 +201,85 @@ blockquote {
   font-size: 0.85rem;
 }
 
+/* plates: hotlinked from Commons, public domain, the 1999 way */
+.plate {
+  margin: 1.5rem 0;
+  padding: 0.6rem;
+  border: 4px double var(--seal);
+  background: var(--paper);
+  box-shadow: 0 0 0 2px var(--gold);
+}
+
+.plate img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.plate figcaption {
+  margin-top: 0.5rem;
+  color: var(--gold-deep);
+  font-family: "Courier New", monospace;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+/* the whole scroll in one strip; the scrollbar is the table edge */
+.unroll {
+  overflow-x: auto;
+}
+
+.unroll img {
+  height: 160px;
+  width: auto;
+  max-width: none;
+}
+
+.sign-form {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border: 2px ridge var(--gold);
+  background: var(--parchment);
+}
+
+.sign-form label {
+  display: block;
+  margin-top: 0.8rem;
+  color: var(--gold-deep);
+  font-family: "Courier New", monospace;
+  font-size: 0.85rem;
+}
+
+.sign-form input,
+.sign-form textarea {
+  display: block;
+  width: 100%;
+  margin-top: 0.2rem;
+  padding: 0.4rem;
+  border: 2px inset var(--parchment-dark);
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+}
+
+.sign-form button {
+  margin-top: 1rem;
+  padding: 0.4rem 1.2rem;
+  border: 2px outset var(--parchment-dark);
+  background: var(--gold);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.sign-form button:hover,
+.sign-form button:focus {
+  border-style: inset;
+}
+
 footer {
   max-width: 42rem;
   margin: 0 auto 3rem;

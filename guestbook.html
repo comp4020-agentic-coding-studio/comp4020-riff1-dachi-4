@@ -9,9 +9,9 @@
   <body>
     <div class="ticker" aria-hidden="true">
       <p class="ticker-track">
-        ☆ RETIRED 2003 ☆ PRESERVED EXACTLY AS SUBMITTED ☆ SIGN NOTHING, THE
-        BOOK IS CLOSED ☆ RETIRED 2003 ☆ PRESERVED EXACTLY AS SUBMITTED ☆ SIGN
-        NOTHING, THE BOOK IS CLOSED ☆
+        ☆ CLOSED 2003 ☆ REOPENED 2026 ☆ ENTRIES BY ELECTRONIC MAIL, PASTED IN
+        BY HAND ☆ CLOSED 2003 ☆ REOPENED 2026 ☆ ENTRIES BY ELECTRONIC MAIL,
+        PASTED IN BY HAND ☆
       </p>
     </div>
     <header>
@@ -26,15 +26,51 @@
     </header>
     <main>
       <h1>Guestbook</h1>
-      <p class="subtitle">Retired 2003. Kept exactly as it was left.</p>
-
-      <p>
-        The shrine once took visitors at their word. The book closed years
-        ago &mdash; no new entries, typos and all preserved &mdash; but what
-        was signed stays signed.
+      <p class="subtitle">
+        Closed 2003. Reopened 2026, against the keeper&rsquo;s better
+        judgement.
       </p>
 
+      <p>
+        The shrine once took visitors at their word, and now it does again.
+        The old entries below are preserved exactly as submitted, typos and
+        all; new ones arrive by electronic mail and get pasted in above them
+        by hand, which is how it always worked anyway.
+      </p>
+
+      <form
+        class="sign-form"
+        method="post"
+        action="mailto:keeper@fuchun-shrine.example"
+        enctype="text/plain"
+      >
+        <label for="handle">your handle</label>
+        <input id="handle" name="handle" type="text" required />
+        <label for="whence">whence you wandered in</label>
+        <input
+          id="whence"
+          name="whence"
+          type="text"
+          placeholder="a webring, a search engine, 2am"
+        />
+        <label for="entry">your entry</label>
+        <textarea id="entry" name="entry" rows="4" required></textarea>
+        <button type="submit">Sign the book</button>
+        <p class="entry-meta">
+          No scripts on this shrine, so the button hands your entry to your
+          own mail program. The keeper pastes it in, typos preserved. Allow a
+          few years.
+        </p>
+      </form>
+
       <ol class="guestbook" reversed>
+        <li class="entry">
+          <p class="entry-meta">the_keeper &mdash; 5 Aug 2026</p>
+          <blockquote>
+            found the key to the book while moving servers. it opens. be nice
+            to each other in here
+          </blockquote>
+        </li>
         <li class="entry">
           <p class="entry-meta">brushwork_nerd &mdash; 2 Nov 2001</p>
           <blockquote>
